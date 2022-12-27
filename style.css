@@ -1,0 +1,87 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.header{
+    background-color: blue;
+    grid-column: 2/3;
+}
+    .header-toprow{
+
+    }
+        .searchbar img{
+            width: 24px;
+            height: 24px;
+        }
+        .header-settings{
+
+        }
+
+            .notif-bell{
+                width: 24px;
+                height: 24px;
+            }
+            .settings-pfp{
+                width: 40px;
+                height: 40px;
+                border-radius: 50px;
+            }
+
+    .header-botrow img{
+        width: 64px;
+        border-radius: 50px;
+    }
+
+.sidebar{
+    background-color: aqua;
+    grid-row: 1/3;
+}
+    .sidebar img{
+        width: 24px;
+        height: 24px;
+    }
+        .sidebar-header img{
+            width: 64px;
+            height: 64px;
+        }
+
+.article{
+    background-color: blueviolet;
+}
+    .projects{
+        background-color: chocolate;
+    }
+        .project-grid{
+            background-color: darkgoldenrod;
+        }
+            .project-card{
+                background-color: darksalmon;    
+            }
+    .annoucements{
+        background-color: darkgreen;
+    }
+        .annoucement-grid{
+            background-color: darkolivegreen;
+        }
+            .annoucement-card{
+                background-color: chartreuse;
+            }
+            
+    .trending{
+        background-color: dodgerblue;
+    }
+    .trending img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+    }
+        .trending-grid{
+            background-color: rgb(68, 194, 152);
+        }
+
+            .trending-card{
+                background-color: rgb(74, 136, 175);
+            }
+        
