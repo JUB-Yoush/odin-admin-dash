@@ -1,23 +1,49 @@
 .container{
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 160px 5fr;
+    position: fixed;
 }
 
 .header{
-    background-color: blue;
+    background-color: #ffedd5;
     grid-column: 2/3;
+    display: grid;
+    grid-template-rows: repeat(2,80px);
 }
-    .header-toprow{
 
+    .header-toprow{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
+        .searchbar{
+            margin-left: 32px;
+        }
+        .searchbar input{
+            border: none;
+            background-color: rgb(211, 211, 211);
+            width: 40vw;
+            border-radius: 50px;
+            align-self: center;
+        }
         .searchbar img{
             width: 24px;
             height: 24px;
+            align-self: center;
         }
         .header-settings{
-
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
         }
+            .header-settings > *{
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+                .header-settings p{
+                    margin-right: 32px
+                }
 
             .notif-bell{
                 width: 24px;
@@ -28,60 +54,203 @@
                 height: 40px;
                 border-radius: 50px;
             }
+        
+
+    .header-botrow{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 16px;
+    }
 
     .header-botrow img{
         width: 64px;
+        height: 64px;
         border-radius: 50px;
     }
+        .greeting{
+            display: flex;
+            align-items: center;
+            margin-left: 32px;
+        }
 
+        .greeting p{
+            font-size: .8rem;
+            margin-bottom: 8px;
+        }
+
+            .greeting-text{
+                margin-left: 8px;
+            }
+        .botrow-buttons{
+            margin-right: 16px;
+        } 
+        .botrow-buttons button{
+            width: 80px;
+            height: 32px;
+            border-radius: 50px;
+            margin-left: 16px;
+            margin-right: 16px;
+            border: none;
+            background-color: #80bfd3;
+            font-weight: bold;
+        }
 .sidebar{
-    background-color: aqua;
+    background-color: #80bfd3;
     grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.sidebar > *{
+    color: black;
 }
     .sidebar img{
         width: 24px;
         height: 24px;
+        margin-right: 32px
     }
+        .sidebar-header{
+            display: flex;
+            justify-content: center;
+        }
         .sidebar-header img{
             width: 64px;
             height: 64px;
         }
+    
+        .sidebar-header h1{
+            align-self: center;
+            font-size: 1.5rem;
+        }
+        .tabs{
+            margin-top: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 15%;
 
+
+        }
+            .tab{
+                display: flex;
+                margin-top: 15%;
+            }
+
+            .tab p{
+                align-self: center;
+                font-size: 1.2rem;
+            }
+            
 .article{
-    background-color: blueviolet;
+    background-color: #FDBA74;
+    display: grid;
+    padding-top: 16px;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: .7fr 1fr;
 }
+    .article-header{
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
     .projects{
-        background-color: chocolate;
+        margin: 8px;
+        grid-column: 1/2;
+        grid-row: 1/3;
     }
         .project-grid{
-            background-color: darkgoldenrod;
+            margin-top: 8px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
         }
             .project-card{
-                background-color: darksalmon;    
+                border-radius: 10px;
+                border-left: 8px solid #155E75;
+                margin: 16px;
+                padding: 16px;
+                background-color: #ffedd5;    
+                height: 169px;
+                display: grid;
+                grid-template-rows: 2fr 3fr 5fr;
             }
+            .project-card h3{
+                font-size: 1.3rem;
+            }
+            .project-card p{
+                font-size: .9rem;
+            }
+                .card-options{
+                    display: flex;
+                    justify-content: end;
+                    align-items: flex-end;
+                }
+                .card-options img{
+                    width: 24px;
+                    height: 24px;
+                    padding: 12px;
+                }
     .annoucements{
-        background-color: darkgreen;
+        margin: 8px;
+        grid-template-columns: 2/3;
     }
         .annoucement-grid{
-            background-color: darkolivegreen;
+            margin-top: 8px;
+            background-color: #ffedd5;
+            border-radius: 10px;
+            display: grid;
+            grid-template-rows: repeat(3,1fr);
+            padding: 8px;
         }
             .annoucement-card{
-                background-color: chartreuse;
+                height: 80px;
+                margin: 8px;
+                padding: 8px;
+                border-bottom: 2px solid #155E75;
+            }
+            .annoucement-grid :last-child{
+                border-bottom: 0px solid grey;
+            }
+            .annoucement-card h3{
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
+            .annoucement-card p{
+                font-size: .8rem;
             }
             
     .trending{
-        background-color: dodgerblue;
+        margin: 8px;
+        grid-template-columns: 2/3;
     }
     .trending img{
         width: 40px;
         height: 40px;
+        margin-left: 5%;
+        margin-right: 10%;
         border-radius: 50px;
     }
         .trending-grid{
-            background-color: rgb(68, 194, 152);
+            margin-top: 8px;
+            border-radius: 10px;
+            padding: 4px;
+            background-color: #ffedd5;
+            display: grid;
+            grid-template-rows: repeat(3,1fr);
         }
 
             .trending-card{
-                background-color: rgb(74, 136, 175);
+                display: flex;
+                align-items: center;
+                height: 40px;
+                margin: 8px;
+                padding: 8px;
+                border-bottom: 2px solid #155E75;
             }
         
+            .trending-grid :last-child{
+                border-bottom: 0px solid grey;
+            }
+                .trending-text :nth-child(2){
+                    font-size: 12px;
+                }
